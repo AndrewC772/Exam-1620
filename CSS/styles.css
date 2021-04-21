@@ -10,12 +10,11 @@ h1 {
 
 .gridlayout {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 2rem 1rem 4rem 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 8fr 2fr;
     grid-template-areas: 
         'n n'
         'h h'
-        'm m'
         'm m'
         'f f';
     height: 100vh;
@@ -23,28 +22,62 @@ h1 {
 }
 .nav {
     grid-area: n;
-    background-color: aqua;
+    background-color: beige;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
+.nav_list {
+    text-align: center;
+    display: inline-block;
+}
 .header {
     grid-area: h;
     background-color: grey;
+    color: white;
+    text-align: center;
+}
+.section-header {
+    text-align: center;
+}
+.shop-item {
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+}
+.shop-item-image {
+    align-items: center;
 }
 .main {
     grid-area: m;
-    background-color: aqua;
+    background-color: beige;
+    grid-template-rows: 2fr 2fr 1fr;
+}
+.cart {
+    align-items: bottom;
+    text-align: center;
+    background-color: blanchedalmond;
+}
+.cart-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+.wrapper {
+    display: grid;
+    
 }
 .footer {
     grid-area: f;
     background-color: blueviolet;
+    text-align: center;
 }
 
 @media screen and (min-width: 640px) {
     .gridlayout {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 2rem 3rem 4fr 2rem;
         grid-template-areas: 
             'n n n n'
@@ -57,6 +90,9 @@ h1 {
     .nav {
         grid-area: n;
         background-color: beige;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
     .nav_list {
         text-align: center;
@@ -78,7 +114,7 @@ h1 {
     .shop-item {
         display:flex;
         justify-content: space-around;
-        flex-direction: row;
+        flex-direction: column;
         gap:20px;
         align-items: center;
     }
