@@ -108,15 +108,12 @@ h1 {
         text-align: center;
     }
     .shop-items {
-        display: flex;
-        justify-content: center;
+        display: inline-block;
     }
     .shop-item {
         display:flex;
         justify-content: space-around;
-        flex-direction: column;
-        gap:20px;
-        align-items: center;
+        padding: 20px;
     }
     .shop-item-image {
         align-items: center;
